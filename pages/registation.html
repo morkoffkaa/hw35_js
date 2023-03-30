@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/style.css" />
+  </head>
+  <body>
+    <section class="section_wrap">
+      <div class="container">
+        <h1 class="h1">Registration</h1>
+        <p class="text">Already have an account?</p>
+        <a class="button" href="./index.html">Log in</a>
+        <form action="https://fom.in.ua/echo" method="post">
+          <div class="form-input">
+            <label class="text" for="email">Please enter email: </label>
+            <input
+              type="text"
+              pattern="[^ @]*@[^ @]*"
+              title="Plese enter correct email"
+              id="email"
+              name="email"
+              placeholder="Your email"
+              required
+            />
+            <label class="text" for="pwd">Create a password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+              placeholder="******"
+              required
+            />
+            <label class="text" for="password">Repeat password:</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              minlength="8"
+              placeholder="******"
+              required
+            />
+            <div class="form-input">
+              <p>Remember me</p>
+              <label class="text" for="remember_me">Yes</label>
+              <input
+                id="remember_me"
+                type="checkbox"
+                name="remember_me"
+                value="Yes"
+                no-checked
+              />
+            </div>
+          </div>
+          <div class="btn-wrap">
+            <button type="submit" class="btn">Continue</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>

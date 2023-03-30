@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../style/reset.css" />
+    <link rel="stylesheet" href="../style/search.css" />
+  </head>
+  <body>
+    <section class="section_wrap">
+      <div class="container">
+        <h1 class="h1">Пошук автомобілей</h1>
+        <h2 class="h2">Що ти шукаєш?</h2>
+        <form action="https://fom.in.ua/echo" method="post">
+          <div class="main_contant">
+            <div class="form-input">
+              <label for="selected_type">Тип транспорта</label>
+              <select class="select" name="transport_type" id="transport_type">
+                <option value="0" selected="selected">
+                  Всі види транспорту
+                </option>
+                <option value="legkovi">Легкові</option>
+                <option value="moto">Мото</option>
+                <option value="vantazh">Вантажівки</option>
+                <option value="prychep">Причепи</option>
+                <option value="spectehnika">Спецтехніка</option>
+                <option value="autobus">Автобуси</option>
+                <option value="vodnyi">Водний транспорт</option>
+                <option value="povitryanyi">Повітряний транспорт</option>
+              </select>
+            </div>
+            <div class="form-input">
+              <label for="selected_type">Країна-виробник</label>
+              <select
+                class="select"
+                name="produced_country"
+                id="produced_country"
+              >
+                <option value="0" selected="selected">Оберіть країну</option>
+                <option value="germany">Німеччина</option>
+                <option value="japan">Японія</option>
+                <option value="france">Франція</option>
+                <option value="usa">США</option>
+                <option value="korea">Корея</option>
+                <option value="england">Англія</option>
+              </select>
+            </div>
+            <div class="form-input">
+              <label class="selected_type" for="selected_type"
+                >Марка авто</label
+              >
+              <select class="select" name="car_brand" id="car_brand">
+                <option value="0" selected="selected">Оберіть марку</option>
+                <option value="audi">Audi</option>
+                <option value="bmw">BMW</option>
+                <option value="mercedes">Mercedes-Benz</option>
+                <option value="porshe">Porshe</option>
+                <option value="vw">Volkswagen</option>
+                <option value="smart">Smart</option>
+              </select>
+            </div>
+            <div class="form-input">
+              <label for="selected_type">Тип кузова</label>
+              <select class="select" name="body_type" id="body_type">
+                <option value="0" selected="selected">
+                  Оберіть тип кузова
+                </option>
+                <option value="sedan">Седан</option>
+                <option value="kype">Купе</option>
+                <option value="hetchback">Хетчбек</option>
+                <option value="universal">Універсал</option>
+                <option value="furgon">Фургон</option>
+                <option value="pickap">Пікап</option>
+              </select>
+            </div>
+            <div class="form-input">
+              <label for="price_from">Ціна </label>
+              <input
+                type="number"
+                id="price_from"
+                name="price_from"
+                placeholder="від"
+              />
+              <input
+                type="number"
+                id="price_till"
+                name="price_till"
+                placeholder="до"
+              />
+            </div>
+            <div class="form-input">
+              <label for="price_from">Рік випуску </label>
+              <input
+                type="text"
+                id="year_from"
+                name="year_from"
+                placeholder="від"
+              />
+              <input
+                type="text"
+                id="year_till"
+                name="year_till"
+                placeholder="до"
+              />
+            </div>
+            <div class="form-input">
+              <label for="selected_type">Тип палива</label>
+              <select class="select" name="fuel_type" id="fuel_type">
+                <option value="0" selected="selected">
+                  Оберіть тип палива
+                </option>
+                <option value="benzin">Бензин</option>
+                <option value="disel">Дизель</option>
+                <option value="gas/benzin">Газ/Бензин</option>
+                <option value="gybryd">Гібрид</option>
+                <option value="electro">Електро</option>
+              </select>
+            </div>
+            <div class="form_input_multiple">
+              <p class="text">Оберіть стан</p>
+              <label for="condition_type_need_repair">Вимагає ремонту</label>
+              <input
+                id="condition_type_need_repair"
+                type="checkbox"
+                name="condition_type"
+                value="need_repair"
+                non-checked
+              />
+              <label for="condition_type_non_customs">Нерозмитнена</label>
+              <input
+                id="condition_type_non-customs"
+                type="checkbox"
+                name="condition_type"
+                value="non_customs"
+                non-checked
+              />
+              <label for="condition_type_after_accident">Після ДТП</label>
+              <input
+                id="condition_type_after_accident"
+                type="checkbox"
+                name="condition_type"
+                value="after_accident"
+                non-checked
+              />
+              <label for="condition_type_repair_parts"
+                >Запчастини та комплектуючі</label
+              >
+              <input
+                id="condition_type_repair_parts"
+                type="checkbox"
+                name="condition_type"
+                value="repair_parts"
+                non-checked
+              />
+              <label for="condition_type_new_auto">Нове авто</label>
+              <input
+                id="condition_type_new_auto"
+                type="checkbox"
+                name="condition_type"
+                value="new_auto"
+                non-checked
+              />
+            </div>
+            <div class="form_input_radio">
+              <p class="text">Оберіть тип коробки передач</p>
+              <input
+                type="radio"
+                name="transmission"
+                value="mechanical"
+                id="transmission_mechanical"
+              />
+              <label class="label" for="mc1">Механічна</label>
+              <input
+                type="radio"
+                name="transmission"
+                value="automatic"
+                id="transmission_automatic"
+              />
+              <label class="label" for="mc2">Автоматична</label>
+            </div>
+            <div class="form_input_multiple">
+              <p class="text">Додаткові опції</p>
+              <label for="condition_type_leather_interior"
+                >Шкіряний салон</label
+              >
+              <input
+                id="condition_type_leather_interior"
+                type="checkbox"
+                name="condition_type"
+                value="leather_interior"
+                non-checked
+              />
+              <label for="condition_type_panorama">Панорамний дах</label>
+              <input
+                id="condition_type_panorama"
+                type="checkbox"
+                name="condition_type"
+                value="panorama"
+                non-checked
+              />
+              <label for="condition_type_cabrio">Кабріолет</label>
+              <input
+                id="condition_type_cabrio"
+                type="checkbox"
+                name="condition_type"
+                value="cabrio"
+                non-checked
+              />
+            </div>
+            <div class="btn-wrap">
+              <button type="submit" class="btn">Continue</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
